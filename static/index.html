@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work Time Tracker</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">TEAM OPERATIONS</p>
+      <h1>Work Time Tracker</h1>
+      <p>Log time by task and review how your team spent it.</p>
+    </header>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section aria-labelledby="team-title">
+      <h2 id="team-title">Employees</h2>
+      <form id="add-employee">
+        <label>Employee name <input name="name" required maxlength="80" placeholder="e.g. Alex Rivera"></label>
+        <button type="submit">Add employee</button>
+      </form>
+      <div id="employees"></div>
+    </section>
+    <section aria-labelledby="report-title">
+      <h2 id="report-title">Time report</h2>
+      <p class="muted">Dates are inclusive and use UTC. Running timers are counted through the time the report is refreshed.</p>
+      <form id="report-form">
+        <label>Start date <input type="date" name="start" required></label>
+        <label>End date <input type="date" name="end" required></label>
+        <button type="submit">Refresh report</button>
+      </form>
+      <div id="report"></div>
+    </section>
+    <footer>Falcon AI test assignment · Use fictional employee data.</footer>
+  </main>
+</body>
+</html>
